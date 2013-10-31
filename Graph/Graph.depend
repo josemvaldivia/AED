@@ -1,0 +1,33 @@
+# depslib dependency file v1.0
+1381639264 source:e:\san pablo\aed\graph\main.cpp
+	<iostream>
+	"graph.h"
+	"node.h"
+	"edge.h"
+	"test.h"
+	<stack>
+	<vector>
+
+1381639708 e:\san pablo\aed\graph\graph.h
+	"node.h"
+	"edge.h"
+	<stack>
+	<vector>
+
+1381639627 e:\san pablo\aed\graph\node.h
+	"graph.h"
+	"edge.h"
+	<vector>
+	<stack>
+
+1381639803 e:\san pablo\aed\graph\edge.h
+	<stack>
+	"node.h"
+	"graph.h"
+
+1381193008 e:\san pablo\aed\graph\test.h
+	"graph.h"
+	"node.h"
+	"edge.h"
+	<assert.h>
+

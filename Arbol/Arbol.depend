@@ -1,0 +1,18 @@
+# depslib dependency file v1.0
+1379020054 source:e:\san pablo\aed\arbol\main.cpp
+	<iostream>
+	"arbolbinario.h"
+	"nodo.h"
+
+1379020194 e:\san pablo\aed\arbol\arbolbinario.h
+	"nodo.h"
+	"traitmayor.h"
+	<iostream>
+
+1379018791 e:\san pablo\aed\arbol\nodo.h
+
+1379018791 e:\san pablo\aed\arbol\traitmayor.h
+	"Mayor.h"
+
+1379018791 e:\san pablo\aed\arbol\mayor.h
+

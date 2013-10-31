@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1380851241 source:e:\san pablo\aed\arbol avl\main.cpp
+	<iostream>
+	"ArbolBinario.h"
+	"TraitMenor.h"
+	"TraitMayor.h"
+
+1380851330 e:\san pablo\aed\arbol avl\arbolbinario.h
+	"Nodo.h"
+	"TraitMayor.h"
+	<iostream>
+	<stack>
+
+1380841996 e:\san pablo\aed\arbol avl\nodo.h
+
+1379005416 e:\san pablo\aed\arbol avl\traitmayor.h
+	"Mayor.h"
+
+1379003722 e:\san pablo\aed\arbol avl\mayor.h
+
+1379005416 e:\san pablo\aed\arbol avl\traitmenor.h
+	"Menor.h"
+
+1379021406 e:\san pablo\aed\arbol avl\menor.h
+

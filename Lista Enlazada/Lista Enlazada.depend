@@ -1,0 +1,30 @@
+# depslib dependency file v1.0
+1377633009 source:e:\san pablo\aed\lista enlazada\main.cpp
+	<iostream>
+	"Lista.h"
+	"nodo.h"
+	"traitasciende.h"
+	"traitdesciende.h"
+
+1377632998 e:\san pablo\aed\lista enlazada\lista.h
+	"nodo.h"
+	<iostream>
+	"asciende.h"
+	"desciende.h"
+	"traitasciende.h"
+	"traitdesciende.h"
+
+1377622292 e:\san pablo\aed\lista enlazada\nodo.h
+	<iostream>
+	"Lista.h"
+
+1377629510 e:\san pablo\aed\lista enlazada\asciende.h
+
+1377629510 e:\san pablo\aed\lista enlazada\desciende.h
+
+1377622927 e:\san pablo\aed\lista enlazada\traitasciende.h
+	"asciende.h"
+
+1377622927 e:\san pablo\aed\lista enlazada\traitdesciende.h
+	"desciende.h"
+
