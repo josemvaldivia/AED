@@ -1,0 +1,40 @@
+﻿Build started 10/31/2013 11:43:39 AM.
+     1>Project "c:\Users\josémanuel\documents\visual studio 2012\Projects\ConsoleApplication7\ConsoleApplication7\ConsoleApplication7.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Debug\ConsoleApplication7.pch" /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ConsoleApplication7.cpp
+         ConsoleApplication7.cpp
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(70): error C2248: 'Philosopher::Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(55) : vea la declaración de 'Philosopher::Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(70): error C2248: 'Philosopher::~Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(63) : vea la declaración de 'Philosopher::~Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(71): error C2248: 'Philosopher::Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(55) : vea la declaración de 'Philosopher::Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(71): error C2248: 'Philosopher::~Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(63) : vea la declaración de 'Philosopher::~Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(72): error C2248: 'Philosopher::Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(55) : vea la declaración de 'Philosopher::Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(72): error C2248: 'Philosopher::~Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(63) : vea la declaración de 'Philosopher::~Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(73): error C2248: 'Philosopher::Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(55) : vea la declaración de 'Philosopher::Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(73): error C2248: 'Philosopher::~Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(63) : vea la declaración de 'Philosopher::~Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(74): error C2248: 'Philosopher::Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(55) : vea la declaración de 'Philosopher::Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(74): error C2248: 'Philosopher::~Philosopher' : no se puede obtener acceso al miembro private miembro declarado en la clase 'Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(63) : vea la declaración de 'Philosopher::~Philosopher'
+                 c:\users\josémanuel\documents\visual studio 2012\projects\consoleapplication7\consoleapplication7\consoleapplication7.cpp(19) : vea la declaración de 'Philosopher'
+     1>Done Building Project "c:\Users\josémanuel\documents\visual studio 2012\Projects\ConsoleApplication7\ConsoleApplication7\ConsoleApplication7.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.61
