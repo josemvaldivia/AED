@@ -26,6 +26,7 @@ class DistributorDivision
             vector< pair <typename STL::iterator, int> > result;
             int divi= stl_structure.size()/number_of_threads;
             int useful=0;
+            int raz=0;
             for(typename STL::iterator i= stl_structure.begin(); i != stl_structure.end();i++)
             {
 
@@ -33,7 +34,7 @@ class DistributorDivision
                 {
                     pair <typename STL::iterator, int> tmp2;
                     tmp2.first=i;
-                    tmp2.second= stl_structure.size()-1;
+                    tmp2.second=stl_structure.size()-useful;
                     result.push_back(tmp2);
                     return result;
 
@@ -44,11 +45,13 @@ class DistributorDivision
 
                     pair <typename STL::iterator, int> tmp2;
                     tmp2.first=i;
-                    if (useful==0)tmp2.second=0;
-                    else tmp2.second=useful-1;
+                    if (useful==0)tmp2.second=divi;
+                    else tmp2.second=divi;
                     result.push_back(tmp2);
+                    raz=0;
                 }
                 useful++;
+                raz++;
             }
 
             return result;

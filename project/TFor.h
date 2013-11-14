@@ -6,7 +6,9 @@ Realizado por: Jose Manuel Valdivia Romero
 #define TFOR_H
 #include <thread>
 #include <vector>
+#include <iostream>
 #include "DistributorDivision.h"
+#include "FunctionPrueba.h"
 using namespace std;
 
 
@@ -23,8 +25,9 @@ class TFor
 			thr= new thread[nthreads];
 		}
 
-		TFor()					//Si construimos por defecto se asignara el numero de threads segun el hardware concurrency, es decir la cantidad de procesadores que tengamos
+		TFor(STL data)					//Si construimos solo con el STL se asignara el numero de threads segun el hardware concurrency, es decir la cantidad de procesadores que tengamos
 		{
+            data_structure=data;
 			nthreads=thread::hardware_concurrency();
 			thr=new thread[nthreads];
 
@@ -45,14 +48,16 @@ class TFor
 
 		void Iterate()
 		{
+            /*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
+            function_object.to_function= data_structure;
 			distribution = Distribute();
-
-            for(int i=0;i<distribution.size();i++)
-            {
-                cout<<*distribution[i].first<<"\t"<<distribution[i].second<<endl;
-            }
-
-			/*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
+			for(int i=0;i<nthreads;i++)
+			{
+                function_object.base=distribution[i].first;
+                function_object.razon=distribution[i].second;
+                thr[i]=thread(function_object);
+			}
+            Joining();
 
 		}
 
@@ -73,6 +78,7 @@ class TFor
     		int nthreads;			// numero de threads que se usaran
     		vector<pair<typename STL::iterator, int> > distribution; // sera el que cargue toda la distribucion de los threads
     		D distributor;
+    		FO function_object;
 };
 
 #endif // TFOR_H

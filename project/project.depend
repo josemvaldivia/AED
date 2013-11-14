@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1384408173 source:/home/jose/AED/project/main.cpp
+	<iostream>
+	"TFor.h"
+	"DistributorDivision.h"
+	"FunctionPrueba.h"
+	<thread>
+	<vector>
+	<list>
+	<stdio.h>
+	<stdlib.h>
+
+1384408260 /home/jose/AED/project/TFor.h
+	<thread>
+	<vector>
+	<iostream>
+	"DistributorDivision.h"
+	"FunctionPrueba.h"
+
+1384408173 /home/jose/AED/project/DistributorDivision.h
+	<vector>
+
+1384408260 /home/jose/AED/project/FunctionPrueba.h
+	<iostream>
+	<mutex>
+

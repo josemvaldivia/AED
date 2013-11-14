@@ -1,24 +1,28 @@
 #include <iostream>
 #include "TFor.h"
 #include "DistributorDivision.h"
+#include "FunctionPrueba.h"
 #include <thread>
 #include <vector>
 #include <list>
 #include <stdio.h>
 #include <stdlib.h>
+
 using namespace std;
 
 int main()
 {
         srand(0);
-        list<int> lista;
+        vector<int> lista;
+        int x=0;
         for(int i=0;i<100;i++)
         {
-            int x=rand()%23;
+
             lista.push_back(x);
+            x++;
         }
 
-    	TFor< list<int> ,char , DistributorDivision <list< int > > > a(8,lista);
+    	TFor< vector<int> ,FunctionPrueba< vector <int> > , DistributorDivision <vector< int > > > a(8,lista);
     	a.Iterate();
 
     return 0;
