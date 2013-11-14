@@ -15,7 +15,7 @@ int main()
         srand(0);
         vector<int> lista;
         int x=0;
-        for(int i=0;i<100;i++)
+        for(int i=0;i<10;i++)
         {
 
             lista.push_back(x);
@@ -23,7 +23,7 @@ int main()
         }
 
     	TFor< vector<int> ,FunctionPrueba< vector <int> > , DistributorDivision <vector< int > > > a(8,lista);
-    	a.Iterate();
+
 
     return 0;
 }

@@ -23,6 +23,7 @@ class TFor
         	data_structure=data;
 			nthreads=x;
 			thr= new thread[nthreads];
+			Iterate();
 		}
 
 		TFor(STL data)					//Si construimos solo con el STL se asignara el numero de threads segun el hardware concurrency, es decir la cantidad de procesadores que tengamos
@@ -33,6 +34,8 @@ class TFor
 
 		}
         virtual ~TFor() {
+
+            delete[] thr;
 
         }
         vector<pair<typename STL::iterator, int> > Distribute()
