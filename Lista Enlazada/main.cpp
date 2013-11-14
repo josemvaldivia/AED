@@ -10,6 +10,7 @@ int main()
     Lista< TraitAsciende<int> > a;
     Lista <TraitDesciende <float> > b;
     a.insertar(4);
+    a.insertar(1);
     a.insertar (2);
     a.insertar(43);
     a.insertar(20);

@@ -1,9 +1,7 @@
-// ConsoleApplication7.cpp: define el punto de entrada de la aplicación de consola.
-//
-
-#include "stdafx.h"
 #include <list>
 #include <iostream>
+#include <thread>
+
 using namespace std;
 
 
@@ -12,16 +10,17 @@ class Fork
 	bool use;
 	Fork();
 	~Fork();
-
+	
 };
 
 class Philosopher
 {
+
+	public:
 	int id;
 	int counter_for_die;
 	int counter_for_eat;
 	Fork * have [2];
-	 
 	void Eat()
 	{
 		cout<<id<<"\tis eating\n";
@@ -63,9 +62,12 @@ class Philosopher
 	~Philosopher()
 	{
 	}
+
+	private:
+	protected:
 };
 
-int _tmain(int argc, _TCHAR* argv[])
+int main()
 {
 	Philosopher bob (0);
 	Philosopher phil (1);
@@ -73,6 +75,15 @@ int _tmain(int argc, _TCHAR* argv[])
 	Philosopher bill (3);
 	Philosopher max (4);
 	list <Philosopher*> a;
+	thread * thr =new thread [5];
+	typename list<Philosopher*>::iterator  it_list;
+	int x=0;
+	for(it_list =a.begin(); it_list!=a.end();it_list++)
+	{
+	
+		thr[x]=thread((*it_list)->Wait);
+		x++;
+	}
 	a.push_back(& bob);
 
 	return 0;
