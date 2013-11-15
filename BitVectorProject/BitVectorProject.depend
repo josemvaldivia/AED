@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1384475200 source:/home/jose/AED/BitVectorProject/main.cpp
+	<iostream>
+	"BitVector.h"
+
+1384475474 /home/jose/AED/BitVectorProject/BitVector.h
+
