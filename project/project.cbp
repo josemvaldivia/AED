@@ -32,7 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="DistribuidorDesigual.h" />
 		<Unit filename="DistributorDivision.h" />
+		<Unit filename="DistributorNotEqual.h" />
+		<Unit filename="FunctionPrueba.h" />
 		<Unit filename="TFor.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>

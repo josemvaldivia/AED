@@ -1,26 +1,29 @@
 # depslib dependency file v1.0
-1384409283 source:/home/jose/AED/project/main.cpp
+1384796042 source:/home/jose/AED/project/main.cpp
 	<iostream>
 	"TFor.h"
-	"DistributorDivision.h"
-	"FunctionPrueba.h"
 	<thread>
 	<vector>
 	<list>
 	<stdio.h>
 	<stdlib.h>
+	"DistributorNotEqual.h"
 
-1384408280 /home/jose/AED/project/TFor.h
+1384795485 /home/jose/AED/project/TFor.h
 	<thread>
 	<vector>
 	<iostream>
+	"DistributorNotEqual.h"
 	"DistributorDivision.h"
 	"FunctionPrueba.h"
 
 1384409297 /home/jose/AED/project/DistributorDivision.h
 	<vector>
 
-1384408765 /home/jose/AED/project/FunctionPrueba.h
+1384434949 /home/jose/AED/project/FunctionPrueba.h
 	<iostream>
 	<mutex>
+
+1384796029 /home/jose/AED/project/DistributorNotEqual.h
+	<vector>
 

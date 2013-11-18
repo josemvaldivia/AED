@@ -7,6 +7,7 @@ Realizado por: Jose Manuel Valdivia Romero
 #include <thread>
 #include <vector>
 #include <iostream>
+#include "DistributorNotEqual.h"
 #include "DistributorDivision.h"
 #include "FunctionPrueba.h"
 using namespace std;
@@ -31,6 +32,7 @@ class TFor
             data_structure=data;
 			nthreads=thread::hardware_concurrency();
 			thr=new thread[nthreads];
+			Iterate();
 
 		}
         virtual ~TFor() {
@@ -54,11 +56,21 @@ class TFor
             /*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
             function_object.to_function= data_structure;
 			distribution = Distribute();
-			for(int i=0;i<nthreads;i++)
+			/*for(int i=0;i<nthreads;i++)
 			{
                 function_object.base=distribution[i].first;
                 function_object.razon=distribution[i].second;
                 thr[i]=thread(function_object);
+			}*/
+
+
+			int x=0;
+			for(typename vector<pair<typename STL::iterator, int> >::iterator i = distribution.begin();i != distribution.end();i++)
+			{
+                function_object.base=(*i).first;
+                function_object.razon=(*i).second;
+                thr[x]=thread(function_object);
+                x++;
 			}
             Joining();
 

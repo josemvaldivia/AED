@@ -1,7 +1,5 @@
 #include <iostream>
 #include "TFor.h"
-#include "DistributorDivision.h"
-#include "FunctionPrueba.h"
 #include <thread>
 #include <vector>
 #include <list>
@@ -13,17 +11,15 @@ using namespace std;
 int main()
 {
         srand(0);
-        vector<int> lista;
+        list<int> lista;
         int x=0;
-        for(int i=0;i<10;i++)
+        for(int i=0;i<100;i++)
         {
 
             lista.push_back(x);
             x++;
         }
 
-    	TFor< vector<int> ,FunctionPrueba< vector <int> > , DistributorDivision <vector< int > > > a(8,lista);
-
-
+    	TFor< list<int> ,FunctionPrueba< list <int> > , DistributorDivision <list< int > > > a(lista);
     return 0;
 }

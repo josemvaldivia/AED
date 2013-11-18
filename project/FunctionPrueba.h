@@ -17,8 +17,14 @@ class FunctionPrueba
         {
             for(int i=0;i<razon;i++)
             {
-                cout<<*base<<endl;
+
+                for(int i=0;i<1000;i++)
+                {
+                int x=rand()%653;
+                cout<<*base*x%433<<endl;
                 base++;
+                1+1+1+1+1+1+1+1+1+1+1+1;
+                }
             }
 
         }
