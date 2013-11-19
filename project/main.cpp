@@ -20,6 +20,8 @@ int main()
             x++;
         }
 
-    	TFor< list<int> ,FunctionPrueba< list <int> > , DistributorDivision <list< int > > > a(lista);
+    	TFor<DistributorDivision <list<int>,FunctionPrueba<list<int> > > > a(lista) ;
+    	a();
+
     return 0;
 }

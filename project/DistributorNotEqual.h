@@ -4,10 +4,14 @@
 
 using namespace std;
 
-template <typename STL>
+template <typename STL,typename FO>
 class DistributorNotEqual
 {
+
     public:
+
+        typedef STL _STL;
+        typedef FO _FO;
 
         DistributorNotEqual()
         {

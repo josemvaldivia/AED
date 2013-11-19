@@ -13,18 +13,19 @@ Realizado por: Jose Manuel Valdivia Romero
 using namespace std;
 
 
-template<typename STL /*tipo de estructura STL a utilizar (vector, lista, map, etc)*/,
-typename FO /*function object que es la funcion en la que pondremos los threads*/,
-typename D /*Distribuidor de Carga de los threads */>
+template<typename D /*Distribuidor de Carga de los threads */>
 class TFor
 {
     public:
+
+        typedef typename D::_STL STL;
+        typedef typename D::_FO FO;
         TFor(int x,STL data) {
         	//al construirse con este "x" se especificara el numero de threads en total para realizar la funcion
         	data_structure=data;
 			nthreads=x;
 			thr= new thread[nthreads];
-			Iterate();
+
 		}
 
 		TFor(STL data)					//Si construimos solo con el STL se asignara el numero de threads segun el hardware concurrency, es decir la cantidad de procesadores que tengamos
@@ -32,7 +33,7 @@ class TFor
             data_structure=data;
 			nthreads=thread::hardware_concurrency();
 			thr=new thread[nthreads];
-			Iterate();
+
 
 		}
         virtual ~TFor() {
@@ -40,6 +41,8 @@ class TFor
             delete[] thr;
 
         }
+
+
         vector<pair<typename STL::iterator, int> > Distribute()
 			{
 				/*Aqui se desarrollara la funcion para distribuir la carga y devolvera un vector de vectores (la variable distributor), que contendra por cada thread el valor del iterador para que
@@ -51,7 +54,7 @@ class TFor
 
 			}
 
-		void Iterate()
+		void operator () ()
 		{
             /*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
             function_object.to_function= data_structure;
@@ -69,7 +72,7 @@ class TFor
 			{
                 function_object.base=(*i).first;
                 function_object.razon=(*i).second;
-                thr[x]=thread(function_object);
+                thr[x%nthreads]=thread(function_object);
                 x++;
 			}
             Joining();

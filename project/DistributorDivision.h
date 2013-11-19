@@ -2,10 +2,13 @@
 #define DISTRIBUTORDIVISION_H
 #include <vector>
 using namespace std;
-template <typename STL>
+template <typename STL,typename FO>
 class DistributorDivision
 {
     public:
+
+        typedef STL _STL;
+        typedef FO _FO;
 
         DistributorDivision(int x, STL& a) {
 
