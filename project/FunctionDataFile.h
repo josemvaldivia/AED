@@ -4,6 +4,13 @@
 #include <vector>
 #define MAX_MOD 1000
 using namespace std;
+
+/**< \class FunctionDataFile
+
+Es un Function Object, este segun el tipo de distribucion hace que su razon haga distintos tipos de formacion, cuando es la distribucion
+igual, se lanza con el primero, si no lanza al segundo que contiene al vector de vectores
+*/
+
 template <typename STL>
 class FunctionDataFile
 {

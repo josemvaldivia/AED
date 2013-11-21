@@ -14,13 +14,20 @@ Realizado por: Jose Manuel Valdivia Romero
 using namespace std;
 
 
+/**<
+    \class TFor
+    La clase TFor depende de un D, que es el distribuidor de carga, a este se carga la funcion con la respectiva clase STL, el TFor lanzara los threads
+    segun lo que se indique, por defecto será el hardware_concurrency().
+
+*/
+
 template<typename D /*Distribuidor de Carga de los threads */>
 class TFor
 {
     public:
 
-        typedef typename D::_STL STL;
-        typedef typename D::_FO FO;
+        typedef typename D::_STL STL;/**< STL es el tipo de dato STL al que se le aplicara la funcion*/
+        typedef typename D::_FO FO;/**< FO es la funcion en un Function Object*/
         TFor(int x,STL data) {
         	//al construirse con este "x" se especificara el numero de threads en total para realizar la funcion
         	data_structure=data;
@@ -123,14 +130,14 @@ class TFor
 
     protected:
     private:
-            bool typeofdist;
-    		STL data_structure;
-    		thread * thr;
-    		int nthreads;			// numero de threads que se usaran
-    		vector<pair<typename STL::iterator, int> > distribution; // sera el que cargue toda la distribucion de los threads
-            vector <vector <typename STL::iterator> > dit_not_eq;
-    		D distributor;
-    		FO function_object;
+            bool typeofdist; /**< El tipo de distribuidor, ira al Function Object para que este haga la funcion segun sea su tipo*/
+    		STL data_structure;/**< es la estructura de datos contenida en el */
+    		thread * thr;/**<El array de threads que se soltara*/
+    		int nthreads;			/**<cantidad de threads que se utilizaran*/
+    		vector<pair<typename STL::iterator, int> > distribution; /**< distribuidor cargado cuando la distribucion es pareja*/
+            vector <vector <typename STL::iterator> > dit_not_eq;   /**< distribuidor cargado cuando la distribucion no es pareja*/
+    		D distributor;  /**< la instancia del distribuidor*/
+    		FO function_object; /**<La funcion que se aplicara a la estructura de datos*/
 };
 
 #endif // TFOR_H

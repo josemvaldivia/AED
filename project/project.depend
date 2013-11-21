@@ -35,3 +35,39 @@
 	<iostream>
 	<vector>
 
+1385038388 source:c:\users\josémanuel\documents\github\aed\project\main.cpp
+	<iostream>
+	"TFor.h"
+	<thread>
+	<vector>
+	<list>
+	<stdio.h>
+	<stdlib.h>
+	<fstream>
+	"FunctionDataFile.h"
+
+1385038382 c:\users\josémanuel\documents\github\aed\project\tfor.h
+	<thread>
+	<vector>
+	<iostream>
+	"DistributorNotEqual.h"
+	"DistributorDivision.h"
+	"FunctionPrueba.h"
+	"FunctionDataFile.h"
+
+1385038381 c:\users\josémanuel\documents\github\aed\project\distributornotequal.h
+	<vector>
+	<iostream>
+
+1385038380 c:\users\josémanuel\documents\github\aed\project\distributordivision.h
+	<vector>
+	<iostream>
+
+1385038382 c:\users\josémanuel\documents\github\aed\project\functionprueba.h
+	<iostream>
+	<mutex>
+
+1385038381 c:\users\josémanuel\documents\github\aed\project\functiondatafile.h
+	<iostream>
+	<vector>
+

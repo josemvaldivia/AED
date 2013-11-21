@@ -3,6 +3,13 @@
 #include <vector>
 #include <iostream>
 using namespace std;
+
+/**< \class DistributorDivision
+
+    Es el distribuidor con cargas iguales, este es un function object que distribuye la carga de los threads equitativamente, valiendose que el peso
+    de cada uno es el mismo
+*/
+
 template <typename STL,typename FO>
 class DistributorDivision
 {
