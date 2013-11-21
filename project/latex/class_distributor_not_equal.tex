@@ -1,6 +1,10 @@
 \hypertarget{class_distributor_not_equal}{\section{Distributor\-Not\-Equal$<$ S\-T\-L, F\-O $>$ Class Template Reference}
 \label{class_distributor_not_equal}\index{Distributor\-Not\-Equal$<$ S\-T\-L, F\-O $>$@{Distributor\-Not\-Equal$<$ S\-T\-L, F\-O $>$}}
 }
+
+
+{\ttfamily \#include $<$Distributor\-Not\-Equal.\-h$>$}
+
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
@@ -16,9 +20,8 @@
 \hypertarget{class_distributor_not_equal_a650620f34f9e762999f3b6a1a854af7f}{{\bfseries Distributor\-Not\-Equal} (int n, S\-T\-L x)}\label{class_distributor_not_equal_a650620f34f9e762999f3b6a1a854af7f}
 
 \item 
-\hypertarget{class_distributor_not_equal_aba3690d4319e46ad5ca33f11012141d0}{vector$<$ pair$<$ typename \\*
-S\-T\-L\-::iterator, int $>$ $>$ {\bfseries operator()} ()}\label{class_distributor_not_equal_aba3690d4319e46ad5ca33f11012141d0}
-
+vector$<$ pair$<$ typename \\*
+S\-T\-L\-::iterator, int $>$ $>$ \hyperlink{class_distributor_not_equal_aba3690d4319e46ad5ca33f11012141d0}{operator()} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -37,6 +40,21 @@ S\-T\-L\-::iterator $>$ $>$ {\bfseries res}}\label{class_distributor_not_equal_a
 
 \end{DoxyCompactItemize}
 
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename S\-T\-L, typename F\-O$>$class Distributor\-Not\-Equal$<$ S\-T\-L, F\-O $>$}
+
+$<$ este distribuidor devolvera un vector de vectores que contienen al iterador al que se le aplicara la funcion en el function Object 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_distributor_not_equal_aba3690d4319e46ad5ca33f11012141d0}{\index{Distributor\-Not\-Equal@{Distributor\-Not\-Equal}!operator()@{operator()}}
+\index{operator()@{operator()}!DistributorNotEqual@{Distributor\-Not\-Equal}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename S\-T\-L , typename F\-O $>$ vector$<$ pair $<$typename S\-T\-L\-::iterator, int$>$ $>$ {\bf Distributor\-Not\-Equal}$<$ S\-T\-L, F\-O $>$\-::operator() (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_distributor_not_equal_aba3690d4319e46ad5ca33f11012141d0}
+$<$devuelve un vector de pares para no generar conflicto en el \hyperlink{class_t_for}{T\-For}, pero este envia a result la distribucion que es posteriormente cargada en el \hyperlink{class_t_for}{T\-For} 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 

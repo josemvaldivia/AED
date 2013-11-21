@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Typedefs</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -90,6 +90,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">DistributorNotEqual&lt; STL, FO &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="_distributor_not_equal_8h_source.html">DistributorNotEqual.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -105,9 +107,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a650620f34f9e762999f3b6a1a854af7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a650620f34f9e762999f3b6a1a854af7f"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DistributorNotEqual</b> (int n, STL x)</td></tr>
 <tr class="separator:a650620f34f9e762999f3b6a1a854af7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba3690d4319e46ad5ca33f11012141d0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aba3690d4319e46ad5ca33f11012141d0"></a>
-vector&lt; pair&lt; typename <br class="typebreak"/>
-STL::iterator, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>operator()</b> ()</td></tr>
+<tr class="memitem:aba3690d4319e46ad5ca33f11012141d0"><td class="memItemLeft" align="right" valign="top">vector&lt; pair&lt; typename <br class="typebreak"/>
+STL::iterator, int &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_distributor_not_equal.html#aba3690d4319e46ad5ca33f11012141d0">operator()</a> ()</td></tr>
 <tr class="separator:aba3690d4319e46ad5ca33f11012141d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -126,13 +127,45 @@ STL *&#160;</td><td class="memItemRight" valign="bottom"><b>stl_structure</b></t
 int&#160;</td><td class="memItemRight" valign="bottom"><b>number_of_threads</b></td></tr>
 <tr class="separator:a6a1795ab6d09a19f734d3f13b9f04458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;typename STL, typename FO&gt;<br/>
+class DistributorNotEqual&lt; STL, FO &gt;</h3>
+
+<p>&lt; este distribuidor devolvera un vector de vectores que contienen al iterador al que se le aplicara la funcion en el function Object </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="aba3690d4319e46ad5ca33f11012141d0"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename STL , typename FO &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt; pair &lt;typename STL::iterator, int&gt; &gt; <a class="el" href="class_distributor_not_equal.html">DistributorNotEqual</a>&lt; STL, FO &gt;::operator() </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>&lt;devuelve un vector de pares para no generar conflicto en el <a class="el" href="class_t_for.html">TFor</a>, pero este envia a result la distribucion que es posteriormente cargada en el <a class="el" href="class_t_for.html">TFor</a> </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="_distributor_not_equal_8h_source.html">DistributorNotEqual.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 21 2013 16:25:13 for Thread de For by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Nov 21 2013 16:30:07 for Thread de For by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.5
 </small></address>

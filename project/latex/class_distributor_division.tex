@@ -8,11 +8,9 @@
 \subsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-\hypertarget{class_distributor_division_ae97a4cdf404cf245e757bb47bda3ee3e}{typedef S\-T\-L {\bfseries \-\_\-\-S\-T\-L}}\label{class_distributor_division_ae97a4cdf404cf245e757bb47bda3ee3e}
-
+typedef S\-T\-L \hyperlink{class_distributor_division_ae97a4cdf404cf245e757bb47bda3ee3e}{\-\_\-\-S\-T\-L}
 \item 
-\hypertarget{class_distributor_division_a9c9edc89218167c39a3aa0e797ad22c5}{typedef F\-O {\bfseries \-\_\-\-F\-O}}\label{class_distributor_division_a9c9edc89218167c39a3aa0e797ad22c5}
-
+typedef F\-O \hyperlink{class_distributor_division_a9c9edc89218167c39a3aa0e797ad22c5}{\-\_\-\-F\-O}
 \end{DoxyCompactItemize}
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
@@ -20,9 +18,8 @@
 \hypertarget{class_distributor_division_a326603e72a0c3a5df36c1ddd5a5434d2}{{\bfseries Distributor\-Division} (int x, S\-T\-L \&a)}\label{class_distributor_division_a326603e72a0c3a5df36c1ddd5a5434d2}
 
 \item 
-\hypertarget{class_distributor_division_ab3b16a94bd01c77e3697e82a293a787f}{vector$<$ pair$<$ typename \\*
-S\-T\-L\-::iterator, int $>$ $>$ {\bfseries operator()} ()}\label{class_distributor_division_ab3b16a94bd01c77e3697e82a293a787f}
-
+vector$<$ pair$<$ typename \\*
+S\-T\-L\-::iterator, int $>$ $>$ \hyperlink{class_distributor_division_ab3b16a94bd01c77e3697e82a293a787f}{operator()} ()
 \end{DoxyCompactItemize}
 \subsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -48,6 +45,25 @@ S\-T\-L\-::iterator $>$ $>$ {\bfseries res}}\label{class_distributor_division_aa
 $<$
 
 Es el distribuidor con cargas iguales, este es un function object que distribuye la carga de los threads equitativamente, valiendose que el peso de cada uno es el mismo 
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_distributor_division_a9c9edc89218167c39a3aa0e797ad22c5}{\index{Distributor\-Division@{Distributor\-Division}!\-\_\-\-F\-O@{\-\_\-\-F\-O}}
+\index{\-\_\-\-F\-O@{\-\_\-\-F\-O}!DistributorDivision@{Distributor\-Division}}
+\subsubsection[{\-\_\-\-F\-O}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename S\-T\-L , typename F\-O $>$ typedef F\-O {\bf Distributor\-Division}$<$ S\-T\-L, F\-O $>$\-::{\bf \-\_\-\-F\-O}}}\label{class_distributor_division_a9c9edc89218167c39a3aa0e797ad22c5}
+Function Object \hypertarget{class_distributor_division_ae97a4cdf404cf245e757bb47bda3ee3e}{\index{Distributor\-Division@{Distributor\-Division}!\-\_\-\-S\-T\-L@{\-\_\-\-S\-T\-L}}
+\index{\-\_\-\-S\-T\-L@{\-\_\-\-S\-T\-L}!DistributorDivision@{Distributor\-Division}}
+\subsubsection[{\-\_\-\-S\-T\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename S\-T\-L , typename F\-O $>$ typedef S\-T\-L {\bf Distributor\-Division}$<$ S\-T\-L, F\-O $>$\-::{\bf \-\_\-\-S\-T\-L}}}\label{class_distributor_division_ae97a4cdf404cf245e757bb47bda3ee3e}
+$<$Estructura S\-T\-L 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_distributor_division_ab3b16a94bd01c77e3697e82a293a787f}{\index{Distributor\-Division@{Distributor\-Division}!operator()@{operator()}}
+\index{operator()@{operator()}!DistributorDivision@{Distributor\-Division}}
+\subsubsection[{operator()}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename S\-T\-L , typename F\-O $>$ vector$<$ pair $<$typename S\-T\-L\-::iterator, int$>$ $>$ {\bf Distributor\-Division}$<$ S\-T\-L, F\-O $>$\-::operator() (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_distributor_division_ab3b16a94bd01c77e3697e82a293a787f}
+$<$aqui se distribuira la carga y se enviara al \hyperlink{class_t_for}{T\-For} un vector de pares que segun el iterador y la razon podran mandarlo al F\-O 
 
 The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
 \item 

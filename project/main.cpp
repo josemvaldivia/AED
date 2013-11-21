@@ -14,7 +14,7 @@ int main()
 {
 
 
-
+    /**<Aplication TFor, este es un "for" personalizado que reparte cargas a los threads indicados para poder acelerar el proceso */
 
     ifstream fin("data.dat");
     list<int> data;

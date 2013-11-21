@@ -3,7 +3,9 @@
 #include <vector>
 #include <iostream>
 using namespace std;
-
+/**< \class DistributorNotEqual
+    este distribuidor devolvera un vector de vectores que contienen al iterador al que se le aplicara la funcion en el function Object
+    */
 template <typename STL,typename FO>
 class DistributorNotEqual
 {
@@ -29,6 +31,8 @@ class DistributorNotEqual
 
         vector< pair <typename STL::iterator, int> > operator () ()
         {
+            /**<devuelve un vector de pares para no generar conflicto en el TFor, pero este envia a result la distribucion que es posteriormente
+            cargada en el TFor*/
             vector< pair <typename STL::iterator, int> > result;
             res.resize(number_of_threads);
             //stl_structure->sort();

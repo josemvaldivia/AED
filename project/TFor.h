@@ -62,7 +62,7 @@ class TFor
 
         vector<pair<typename STL::iterator, int> > Distribute()
 			{
-				/*Aqui se desarrollara la funcion para distribuir la carga y devolvera un vector de vectores (la variable distributor), que contendra por cada thread el valor del iterador para que
+				/**<Aqui se desarrollara la funcion para distribuir la carga y devolvera un vector de vectores (la variable distributor), que contendra por cada thread el valor del iterador para que
 				cada thread acceda a lo que tiene que mediante esto. Se usara el typename D (distribuidor de carga) para esto */
 				distributor. number_of_threads= nthreads;
 				distributor.stl_structure=&data_structure;
@@ -73,18 +73,14 @@ class TFor
 
 		void operator () ()
 		{
-            /*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
+            /**<en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads
+            con el Function Object*/
             function_object.to_function= &data_structure;
             typeofdist=distributor.type_dis;
             function_object.dist_type=typeofdist;
             function_object.num_of_threads=nthreads;
 			distribution = Distribute();
-			/*for(int i=0;i<nthreads;i++)
-			{
-                function_object.base=distribution[i].first;
-                function_object.razon=distribution[i].second;
-                thr[i]=thread(function_object);
-			}*/
+
 
             if(!distribution.empty())
             {
@@ -120,7 +116,7 @@ class TFor
 
 		void Joining()
 		{
-			/*como la funcion Iterate lanzara las threads se usara la funcion join para esperar a todas las threads*/
+			/**<como la funcion Iterate lanzara las threads se usara la funcion join para esperar a todas las threads*/
 			for (int i = 0; i < nthreads; ++i)
 			{
 				thr[i].join();

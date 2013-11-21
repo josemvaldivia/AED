@@ -3,6 +3,11 @@
 #include <iostream>
 #include <mutex>
 using namespace std;
+
+/**< \class FunctionPrueba
+
+    Este es un function object de prueba que cargara los procesadores
+*/
 template<typename STL>
 class FunctionPrueba
 {

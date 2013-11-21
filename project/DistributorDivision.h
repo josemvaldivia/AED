@@ -15,8 +15,8 @@ class DistributorDivision
 {
     public:
 
-        typedef STL _STL;
-        typedef FO _FO;
+        typedef STL _STL/**<Estructura STL*/;
+        typedef FO _FO;/**<Function Object*/
 
         DistributorDivision(int x, STL& a) {
 
@@ -33,6 +33,7 @@ class DistributorDivision
         virtual ~DistributorDivision() {}
         vector< pair <typename STL::iterator, int> > operator () ()
         {
+            /**<aqui se distribuira la carga y se enviara al TFor un vector de pares que segun el iterador y la razon podran mandarlo al FO*/
             vector< pair <typename STL::iterator, int> > result;
             int divi= stl_structure->size()/number_of_threads;
             int useful=0;
