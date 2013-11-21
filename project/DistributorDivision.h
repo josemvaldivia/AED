@@ -1,6 +1,7 @@
 #ifndef DISTRIBUTORDIVISION_H
 #define DISTRIBUTORDIVISION_H
 #include <vector>
+#include <iostream>
 using namespace std;
 template <typename STL,typename FO>
 class DistributorDivision
@@ -19,7 +20,6 @@ class DistributorDivision
 
          DistributorDivision() {
 
-            number_of_threads=0;
 
         }
 
@@ -27,17 +27,17 @@ class DistributorDivision
         vector< pair <typename STL::iterator, int> > operator () ()
         {
             vector< pair <typename STL::iterator, int> > result;
-            int divi= stl_structure.size()/number_of_threads;
+            int divi= stl_structure->size()/number_of_threads;
             int useful=0;
             int raz=0;
-            for(typename STL::iterator i= stl_structure.begin(); i != stl_structure.end();i++)
+            for(typename STL::iterator i= (*stl_structure).begin(); i != (*stl_structure).end();i++)
             {
 
                 if(result.size()==number_of_threads-1)
                 {
                     pair <typename STL::iterator, int> tmp2;
                     tmp2.first=i;
-                    tmp2.second=stl_structure.size()-useful;
+                    tmp2.second=stl_structure->size()-(divi*(number_of_threads-1));
                     result.push_back(tmp2);
                     return result;
 
@@ -51,16 +51,17 @@ class DistributorDivision
                     if (useful==0)tmp2.second=divi;
                     else tmp2.second=divi;
                     result.push_back(tmp2);
-                    raz=0;
                 }
                 useful++;
-                raz++;
+
+
             }
+
 
             return result;
 
         }
-        STL stl_structure;
+        STL* stl_structure;
         int number_of_threads;
     protected:
     private:

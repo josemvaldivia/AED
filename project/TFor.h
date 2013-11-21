@@ -10,10 +10,11 @@ Realizado por: Jose Manuel Valdivia Romero
 #include "DistributorNotEqual.h"
 #include "DistributorDivision.h"
 #include "FunctionPrueba.h"
+#include "FunctionDataFile.h"
 using namespace std;
 
 
-template<typename D /*Distribuidor de Carga de los threads */>
+template<typename D /*Distribuidor de Carga de los threads */, bool typeofdist=1>
 class TFor
 {
     public:
@@ -38,17 +39,26 @@ class TFor
 		}
         virtual ~TFor() {
 
-            delete[] thr;
+            delete [] thr;
 
         }
 
+        vector< vector<typename STL::iterator > > Distribute2()
+        {
+
+            distributor. number_of_threads= nthreads;
+			distributor.stl_structure=&data_structure;
+
+			return distributor();
+
+        }
 
         vector<pair<typename STL::iterator, int> > Distribute()
 			{
 				/*Aqui se desarrollara la funcion para distribuir la carga y devolvera un vector de vectores (la variable distributor), que contendra por cada thread el valor del iterador para que
 				cada thread acceda a lo que tiene que mediante esto. Se usara el typename D (distribuidor de carga) para esto */
 				distributor. number_of_threads= nthreads;
-				distributor.stl_structure=data_structure;
+				distributor.stl_structure=&data_structure;
 
 				return distributor();
 
@@ -57,7 +67,9 @@ class TFor
 		void operator () ()
 		{
             /*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
-            function_object.to_function= data_structure;
+            function_object.to_function= &data_structure;
+            function_object.dist_type=typeofdist;
+            function_object.num_of_threads=nthreads;
 			distribution = Distribute();
 			/*for(int i=0;i<nthreads;i++)
 			{
@@ -68,12 +80,15 @@ class TFor
 
 
 			int x=0;
-			for(typename vector<pair<typename STL::iterator, int> >::iterator i = distribution.begin();i != distribution.end();i++)
+			for(typename vector<pair<typename STL::iterator, int> >::iterator i = distribution.begin(); i != distribution.end() ; i++)
 			{
-                function_object.base=(*i).first;
-                function_object.razon=(*i).second;
-                thr[x%nthreads]=thread(function_object);
-                x++;
+
+
+                		function_object.base=(*i).first;
+        	       		function_object.razon=(*i).second;
+	               		thr[x%nthreads]=thread(function_object);
+               			x++;
+
 			}
             Joining();
 

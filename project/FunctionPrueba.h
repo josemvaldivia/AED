@@ -6,31 +6,68 @@ using namespace std;
 template<typename STL>
 class FunctionPrueba
 {
+
+
     public:
 
-        FunctionPrueba() {
+         typedef STL STL_;
 
+        FunctionPrueba()
+        {
+
+        }
+
+        FunctionPrueba(bool x) {
+
+            dist_type=x;
         }
         virtual ~FunctionPrueba() {}
 
         void operator () ()
         {
-            for(int i=0;i<razon;i++)
-            {
-
-                for(int i=0;i<1000;i++)
+            if(dist_type){
+                for(int i=0;i<razon;i++)
                 {
-                int x=rand()%653;
-                cout<<*base*x%433<<endl;
-                base++;
-                1+1+1+1+1+1+1+1+1+1+1+1;
+                    for(int i=0;i<=1000;i++)
+                    {
+
+                        for(int i=0;i<=1000;i++)
+                        {
+                            int x=rand()%653;
+                            x+=rand()+*base;
+
+                        }
+                    }
+
+                    base++;
                 }
             }
 
+            else
+            {
+                for(int i=*base;i<to_function->size();i+=i)
+                {
+                      for(int i=0;i<=1000;i++){
+
+                        for(int i=0;i<=1000;i++)
+                        {
+                            int x=rand()%653;
+                            x+=rand()+*base;
+
+                        }
+                    }
+
+                }
+            }
+
+
         }
-        STL to_function;
+
+        bool dist_type;
+        STL* to_function;
         typename STL::iterator base;
         int razon;
+        int num_of_threads;
 
     protected:
     private:

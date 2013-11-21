@@ -5,11 +5,31 @@
 #include <list>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include <fstream>
+#include "FunctionDataFile.h"
 using namespace std;
+
 
 int main()
 {
+
+
+
+
+    /*ifstream fin("data.dat");
+    list<int> data;
+    int i=0;
+    while(!fin.eof()){
+        int val;
+        fin>>val;
+        data.push_back(val);
+        i++;
+    }
+
+
+    cout<<"data loaded\t"<<i<<"\t"<<endl;
+
+    */
         srand(0);
         list<int> lista;
         int x=0;
@@ -20,8 +40,9 @@ int main()
             x++;
         }
 
-    	TFor<DistributorDivision <list<int>,FunctionPrueba<list<int> > > > a(lista) ;
-    	a();
-
+    TFor<DistributorDivision<list<int>,FunctionPrueba<list<int> > >,0 > a(lista) ;
+    a();
+    cout<<"finished"<<endl;
     return 0;
+
 }
