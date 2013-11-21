@@ -16,7 +16,7 @@ int main()
 
 
 
-    /*ifstream fin("data.dat");
+    ifstream fin("data.dat");
     list<int> data;
     int i=0;
     while(!fin.eof()){
@@ -29,7 +29,7 @@ int main()
 
     cout<<"data loaded\t"<<i<<"\t"<<endl;
 
-    */
+    /*
         srand(0);
         list<int> lista;
         int x=0;
@@ -39,8 +39,8 @@ int main()
             lista.push_back(x);
             x++;
         }
-
-    TFor<DistributorDivision<list<int>,FunctionPrueba<list<int> > >,0 > a(lista) ;
+*/
+    TFor<DistributorNotEqual<list<int>,FunctionDataFile<list<int> > >,0 > a(data) ;
     a();
     cout<<"finished"<<endl;
     return 0;

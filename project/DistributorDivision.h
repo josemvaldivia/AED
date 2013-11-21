@@ -62,6 +62,7 @@ class DistributorDivision
 
         }
         STL* stl_structure;
+
         int number_of_threads;
     protected:
     private:

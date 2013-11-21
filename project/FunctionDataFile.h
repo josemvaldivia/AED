@@ -1,6 +1,9 @@
 #ifndef FUNCTIONDATAFILE_H
 #define FUNCTIONDATAFILE_H
+#include <iostream>
+#include <vector>
 #define MAX_MOD 1000
+using namespace std;
 template <typename STL>
 class FunctionDataFile
 {
@@ -22,6 +25,7 @@ class FunctionDataFile
         {
 
             if(dist_type){
+                cout<<"hola2"<<endl;
                 for(int i=0;i<=razon;i++)
                 {
                     DoSomething(*base);
@@ -33,10 +37,10 @@ class FunctionDataFile
             else
             {
 
-                for(int i=0;i<=to_function->size();i+=razon)
+                for(typename vector<typename STL::iterator> :: iterator i=not_equal[razon].begin();i!=not_equal[razon].end();i++)
                 {
-                   DoSomething(*base);
-                   for(int a=0;a<razon;a++) base++;
+                    cout<<"HOLA"<<endl;
+                    DoSomething(*(*i));
                 }
             }
 
@@ -49,9 +53,11 @@ class FunctionDataFile
                 sum += val % i;
             }
         }
+
         bool dist_type;
         STL* to_function;
         typename STL::iterator base;
+        vector< vector< typename STL::iterator> > not_equal;
         int razon;
         int num_of_threads;
     protected:

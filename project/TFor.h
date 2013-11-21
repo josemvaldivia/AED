@@ -78,10 +78,11 @@ class TFor
                 thr[i]=thread(function_object);
 			}*/
 
-
-			int x=0;
-			for(typename vector<pair<typename STL::iterator, int> >::iterator i = distribution.begin(); i != distribution.end() ; i++)
-			{
+            if(!distribution.empty())
+            {
+                int x=0;
+                for(typename vector<pair<typename STL::iterator, int> >::iterator i = distribution.begin(); i != distribution.end() ; i++)
+                {
 
 
                 		function_object.base=(*i).first;
@@ -89,6 +90,23 @@ class TFor
 	               		thr[x%nthreads]=thread(function_object);
                			x++;
 
+                }
+			}
+
+			else
+			{
+
+                function_object.not_equal=distributor.res;
+
+                    cout<<"con sus was";
+
+                for(int i=0;i<nthreads;i++)
+                {
+
+                    function_object.razon=i;
+                    thr[i]=thread(function_object);
+
+                }
 			}
             Joining();
 
@@ -110,6 +128,7 @@ class TFor
     		thread * thr;
     		int nthreads;			// numero de threads que se usaran
     		vector<pair<typename STL::iterator, int> > distribution; // sera el que cargue toda la distribucion de los threads
+            vector <vector <typename STL::iterator> > dit_not_eq;
     		D distributor;
     		FO function_object;
 };
