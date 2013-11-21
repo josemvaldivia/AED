@@ -25,7 +25,6 @@ class FunctionDataFile
         {
 
             if(dist_type){
-                cout<<"hola2"<<endl;
                 for(int i=0;i<=razon;i++)
                 {
                     DoSomething(*base);
@@ -39,7 +38,6 @@ class FunctionDataFile
 
                 for(typename vector<typename STL::iterator> :: iterator i=not_equal[razon].begin();i!=not_equal[razon].end();i++)
                 {
-                    cout<<"HOLA"<<endl;
                     DoSomething(*(*i));
                 }
             }

@@ -61,8 +61,9 @@ class DistributorDivision
             return result;
 
         }
+        bool type_dis=1;
+        vector<vector<typename STL::iterator> > res;
         STL* stl_structure;
-
         int number_of_threads;
     protected:
     private:

@@ -40,7 +40,7 @@ int main()
             x++;
         }
 */
-    TFor<DistributorNotEqual<list<int>,FunctionDataFile<list<int> > >,0 > a(data) ;
+    TFor<DistributorNotEqual<list<int>,FunctionDataFile<list<int> > > > a(data) ;
     a();
     cout<<"finished"<<endl;
     return 0;

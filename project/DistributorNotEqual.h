@@ -30,8 +30,9 @@ class DistributorNotEqual
         vector< pair <typename STL::iterator, int> > operator () ()
         {
             vector< pair <typename STL::iterator, int> > result;
-            res.reserve(number_of_threads);
-            stl_structure->sort();
+            res.resize(number_of_threads);
+            //stl_structure->sort();
+            //Se comento la ordenacion ya que se torna demasiado lenta cuando se intenta ordenar una cantidad de datos grande
             int x=0;
             typename STL::iterator i=stl_structure->begin();
             for(i;i!=stl_structure->end();i++)
@@ -45,6 +46,7 @@ class DistributorNotEqual
             return result;
 
         }
+        bool type_dis =0;
         vector<vector<typename STL::iterator> > res;
         STL* stl_structure;
         int number_of_threads;

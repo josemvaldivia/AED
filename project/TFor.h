@@ -14,7 +14,7 @@ Realizado por: Jose Manuel Valdivia Romero
 using namespace std;
 
 
-template<typename D /*Distribuidor de Carga de los threads */, bool typeofdist=1>
+template<typename D /*Distribuidor de Carga de los threads */>
 class TFor
 {
     public:
@@ -68,6 +68,7 @@ class TFor
 		{
             /*en esta funcion se distribuiran las cargas de la thread con la funcion Distribute() y se soltaran las threads con el Function Object*/
             function_object.to_function= &data_structure;
+            typeofdist=distributor.type_dis;
             function_object.dist_type=typeofdist;
             function_object.num_of_threads=nthreads;
 			distribution = Distribute();
@@ -81,6 +82,7 @@ class TFor
             if(!distribution.empty())
             {
                 int x=0;
+
                 for(typename vector<pair<typename STL::iterator, int> >::iterator i = distribution.begin(); i != distribution.end() ; i++)
                 {
 
@@ -97,12 +99,9 @@ class TFor
 			{
 
                 function_object.not_equal=distributor.res;
-
-                    cout<<"con sus was";
-
+                cout<<"SIZE\t"<<function_object.not_equal.size()<<endl;
                 for(int i=0;i<nthreads;i++)
                 {
-
                     function_object.razon=i;
                     thr[i]=thread(function_object);
 
@@ -124,6 +123,7 @@ class TFor
 
     protected:
     private:
+            bool typeofdist;
     		STL data_structure;
     		thread * thr;
     		int nthreads;			// numero de threads que se usaran
